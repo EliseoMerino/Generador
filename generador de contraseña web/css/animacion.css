@@ -1,0 +1,376 @@
+/* Fuente de Google - Google Fonts*/
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+
+html{
+  min-height: 100%;
+  overflow: scroll 1;
+  scroll-behavior: smooth;
+}
+
+body{
+  position: relative;
+  height: 100%;
+  padding: 4%;
+  color: rgba(255,255,255,.75);
+  font-family: 'Anonymous Pro', monospace;  
+  background-color: rgb(25,25,25);  
+  text-align: center;
+}
+
+
+/* Boton flotante que aparece por debajo a la derecha - Float button that is at the bottom right */
+.btn-flotante {
+	font-size: 16px;
+	text-transform: uppercase; 
+	font-weight: bold; 
+	color: #ffffff; 
+	border-radius: 5px; 
+	letter-spacing: 2px; 
+	background-color: #0C204E; 
+	padding: 18px 30px; 
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+	transition: all 300ms ease 0ms;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  z-index: 99;
+  border: 2px solid #5878ca;
+}
+
+.btn-flotante:hover {
+  background-color: #4FD1C5; /* Color de fondo al pasar el cursor */
+  color: #000000;
+	box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.3);
+	transform: translateY(-7px);
+}
+
+@media only screen and (max-width: 600px) {
+ 	.btn-flotante {
+		font-size: 14px;
+		padding: 12px 20px;
+		bottom: 20px;
+		right: 20px;
+	}
+}
+
+
+/* Botones que aparecen en el header - Buttons that is in the header */
+#navegador ul{
+  margin-top: -25px;
+  list-style-type: none;
+  text-align: center;
+  font-size: large;
+}
+
+#navegador li{
+  display: inline;
+  text-align: center;
+  margin: 0 15px 0 0;
+}
+
+@media all and (max-width: 1200px) {
+  #navegador li {
+      display: list-item;
+      padding:5px;
+  }
+
+  h6{
+    left: 41%;
+    margin-top: 9%;
+  }
+  
+}
+
+#navegador li a {
+  padding: 2px 7px 2px 7px;
+  color: #eeeeee;
+  background-color: rgb(25,25,25);
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all 1s cubic-bezier(0.23, 1, 0.320, 1);
+  box-shadow: 5px 5px 15px #494949;
+}
+
+#navegador li a:hover{
+  background-color: #ffffff;
+  color: #333333;
+  box-shadow: 0px 0px 0px rgb(25,25,25);
+}
+
+
+/* Aqui van el contenedor de los elementos de la pantalla principal, y sus respectivos elementos, como el boton, combobox, etc. -
+  Here is the design for the container and its elements , like the button, combobox, etc. */
+.contenedor {
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  margin: 10px;
+  min-width: 300px;
+  min-height: 60px;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #313133;
+  background: #4FD1C5;
+  background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+}
+
+button::before {
+  content: '';
+  border-radius: 1000px;
+  min-width: calc(300px + 12px);
+  min-height: calc(60px + 12px);
+  border: 6px solid #00FFCB;
+  box-shadow: 0 0 60px rgba(0,255,203,.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+.button:hover, .button:focus {
+  color: #313133;
+  transform: translateY(-6px);
+}
+
+button:hover::before, button:focus::before {
+  opacity: 1;
+}
+
+button::after {
+  content: '';
+  width: 30px; height: 30px;
+  border-radius: 100%;
+  border: 6px solid #00FFCB;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+button:hover::after, button:focus::after {
+  animation: none;
+  display: none;
+}
+
+.selectdiv {
+  position: relative;
+  float: left;
+  min-width: 180px;
+  margin: 10px;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+select{
+  border-radius:36px;
+  border:1px solid #cccccc;
+}
+
+.selectdiv:after {
+  content: '<>';
+  font: 17px "Consolas", monospace;
+  color: #333;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  right: 11px;  
+  top: 18px;
+  padding: 0 0 2px;
+  border-bottom: 1px solid #999;
+  position: absolute;
+  pointer-events: none;
+}
+
+.selectdiv select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: 50px;
+  float: right;
+  margin: 5px 0px;
+  padding: 0px 24px;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #333;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  -ms-word-break: normal;
+  word-break: normal;
+}
+
+h6{
+  position: absolute;
+  top: 8.6%;
+  margin-left: 16.5%;
+}
+
+/* Aca acomodo un poco el h6 - Here i accommodate the h6 */
+@media all and (max-width: 1650px) and (min-width: 1200px) {
+
+  h6{
+    margin-top: -2%;
+    left: 39%;
+  }
+  
+}
+
+/* Animacion para el anillo del boton central - Animation of the ring of the central button */
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
+
+/* Boton para guardar la clave - Button for save de password */
+#save{
+  visibility: hidden;
+  padding: 10px;
+  font-size: medium;
+  color: #eeeeee;
+  background-color: rgb(25,25,25);
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all 1s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+#save:hover{
+  background-color: #ffffff;
+  color: #333333;
+  box-shadow: 0px 0px 0px rgb(25,25,25);
+}
+
+a:link, a:visited, a:active {
+  text-decoration:none;
+}
+
+
+/* Las 4 secciones de la pagina - The 4 sections of the page */
+#sec1,#sec2,#sec3,#sec4{
+  height: 100vh;
+}
+
+
+/* Cajas donde va el texto con información - Boxes where the information goes */
+.caja{
+  position: relative;
+  color: #ffffff; 
+  top: 18vh;
+  font-size: 23px; 
+  font-weight: 400; 
+  text-align: justify; 
+  background: #0C204E; 
+  margin: 70px 70px 70px ; 
+  overflow: hidden; 
+  padding: 40px; 
+  border-radius: 35px 0px 35px 0px; 
+  -moz-border-radius: 35px 0px 35px 0px; 
+  -webkit-border-radius: 35px 0px 35px 0px; 
+  border: 2px solid #5878ca;
+}
+
+
+/* Se establece un tamaño a la barra de desplazamiento y se oculta, tambien se le cambia otras propiedades - Scroll bar is resized and hidden, other properties are also changed */
+*::-webkit-scrollbar {
+  width: 8px;     
+  height: 8px;    
+  display: none;  
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #999999;
+}
+
+
+/* Footer */
+#footer ul{
+  display: inline-grid;
+  list-style-type: none;
+  grid-auto-flow: row;
+  grid-gap: 24px;
+  justify-items: center;
+  margin: auto;
+}
+
+@media (min-width: 500px) {
+  #footer ul {
+    grid-auto-flow: column;
+  }
+}
+
+#footer a {
+  color: white;
+  text-decoration: none;
+  box-shadow: inset 0 -1px 0 hsla(0, 0%, 100%, 0.4);
+}
+
+#footer a:hover {
+  box-shadow: inset 0 -1.2em 0 hsla(0, 0%, 100%, 0.4);
+}
+
+#footer li:last-child {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+#footer li:hover ~ li p {
+  animation: wave-animation 0.3s infinite;
+}
+
+@keyframes wave-animation {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
+}

@@ -1,0 +1,78 @@
+body {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.main {
+    background-color: #333333;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.btn-generate {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-generate:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+        .btn-save {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-save:hover {
+    background-color: #218838;
+    border-color: #218838;
+}
+
+.btn-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    background-color: #ffc107;
+    color: #212529;
+    border-color: #ffc107;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.btn-flotante:hover {
+    background-color: #f8b400;
+    border-color: #f8b400;
+}
+
+.btn-flotante:focus {
+    outline: none;
+}
+
+        /* Estilos para el botón de desplazamiento */
+        #scrollToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #scrollToTopBtn:hover {
+            background-color: #0056b3;
+        }

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureKey</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/sytle.css">
+    <link rel="script" href="js/bootstrap.min.js">
+    <link rel="stylesheet" href="css/animacion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="script" href="js/glitch.js">
+    <link rel="icon" type="image/png" href="img/descarga.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/baffle@0.3.6/dist/baffle.min.js"></script>
+</head>
+<body>
+    <!--Barra de navegacion-->
+    <div id="navegador">
+        <ul >
+            <li><a href="#sec1"><b>Generar contraseña</b></a></li>
+            <li><a href="#sec2"><b>¿Por qué es segura?</b></a></li>
+            <li><a href="#sec3"><b>¿Cómo guardarla?</b></a></li>
+            <li><a href="#sec4"><b>¿Cómo evitar el robo de contraseñas?</b></a></li>
+        </ul>
+    </div>
+<!--Contenido principal-->
+    <div class="main" id="sec1">
+        <br>
+        <!--Boton para genera contraseña-->
+        <div class="contenedor"> 
+            <button type="button" class="button btn btn-primary btn-lg" id="btn" onclick="obtenerClave()">Generar</button>
+        <!--Selector para elegir la longitd de la contraseña-->
+            <div class="selectdiv"> 
+                <select name="items" id="numeroCaracteres" class="form-control">
+
+<!--opciones de longitud  de la contraaseña-->
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+
+                </select>
+            </div>   
+        </div>
+        <!-- muestra texto de la contraseña generada-->
+    <h1 id="textoClave" class="claveSeg">Genere su contraseña segura!</h1> 
+
+    <br>
+    <br>
+<!--Boton para descargar la contraseña generada-->
+    <a href="" id="download" class="btn btn-success"> <i id="save"> <i class="fa fa-download"></i>Guardar clave</i></a>
+    
+</div>
+<!--boton flotante para ir al lugar para generar contraseña-->
+<a href="#" class="btn-flotante">Generar una contraseña segura</a>
+<!--Seccion sobre  por es necesario tener una contraseña segura-->
+<div class="main" id="sec2">
+    <br>
+    <br>
+    <div class="caja">
+        <h4><u>Una contraseña segura tiene estas características:</u></h4> <br> 
+        *Está formada por una combinación de letras mayúsculas, minúsculas, números y caracteres especiales. <br>
+        *No contiene palabras que puedan encontrarse en un diccionario. <br>
+        *No incluye información personal del usuario. <br>
+        *Tiene al menos 8 caracteres de longitud. <br>
+        *Es muy diferente de las contraseñas que hayas utilizado anteriormente.
+    </div>
+    <!--Seccion sobre como guardar una contraseña segura-->
+    <div class="main" id="sec3">
+        <br>
+        <br>
+        <div class="caja">
+            <h4><u>Te recomendamos estas formas de guardar tu contraseña segura:</u></h4> <br> 
+            *Evita guardar el archivo con la contraseña en el escritorio o con un nombre que pueda revelar su contenido. <br>
+            *Guarda el archivo .txt con un nombre fácil de recordar o en una carpeta específica. <br>
+            *Utiliza un programa gestor de contraseñas para almacenarla de forma segura y encriptada. <br>
+            *Escribe la contraseña en un papel, pero asegúrate de guardarla en un lugar seguro y fuera de la vista de otras personas. <br>
+            *Si es posible (dependiendo del tipo de cuenta), activa siempre la autenticación de dos pasos. 
+        </div>
+    </div>
+    <!--Seccion sobre como evitar el robo de contraseña-->
+    <div class="main" id="sec4">
+        <br>
+        <br>
+        <div class="caja">
+            <h4><u>Aquí tienes algunos consejos para evitar que roben tus contraseñas:</u></h4> <br> 
+            *No confíes completamente en el administrador de contraseñas de Google; es mejor considerar desactivarlo. <br>
+            *Antes de ingresar tus credenciales en un sitio web, asegúrate de que la URL sea correcta. <br>
+            *Usa contraseñas diferentes para cada una de tus cuentas. <br>
+            *Cambia tu contraseña al menos una vez al año como medida de seguridad. <br>
+            *Evita enviar información personal por correo electrónico y siempre verifica la autenticidad del remitente. <br>
+            *Comprueba que la URL del sitio donde ingreses tus datos comience con <b>HTTPS</b> y tenga un certificado de seguridad.
+        </div>
+    </div>    
+<!--Boton para poner desplzarse hacia el incio de la pagina web-->
+    <button id="scrollToTopBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
+
+<br>
+<br>
+<!--Scripts-->
+<script src="js/scrolltotop.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
